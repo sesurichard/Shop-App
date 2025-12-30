@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
-import Homepage from "./Pages/Homepage/Homepage";
-import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-import Cart from "./Pages/Cart/Cart";
+import Navbar from "./Components/Navbar/Navbar.jsx";
+// import Footer from "./Components/Footer/Footer";
+import Homepage from "./Pages/Homepage/Homepage.jsx";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
+import Cart from "./Pages/Cart/Cart.jsx";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 

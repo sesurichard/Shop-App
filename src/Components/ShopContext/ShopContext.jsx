@@ -1,6 +1,6 @@
 import { Children, createContext, useState } from "react";
 export const ShopContext = createContext();
-import { productsData } from "../../assets/data";
+import { productsData } from "../../assets/data.jsx";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 

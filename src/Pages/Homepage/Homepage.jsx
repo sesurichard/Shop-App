@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "../../Components/Hero/Hero";
-import ProductList from "../../Components/ProductList/ProductList";
-import { ShopContext } from "../../Components/ShopContext/ShopContext";
+import Hero from "../../Components/Hero/Hero.jsx";
+import ProductList from "../../Components/ProductList/ProductList.jsx";
+import { ShopContext } from "../../Components/ShopContext/ShopContext.jsx";
 // import { productsData } from "../../assets/data";
 const Homepage = () => {
   return (

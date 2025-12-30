@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { BsCart3 } from "react-icons/bs";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { ShopContext } from "../ShopContext/ShopContext";
+import { ShopContext } from "../ShopContext/ShopContext.jsx";
 
 const Navbar = () => {
   const { quantity } = useContext(ShopContext);

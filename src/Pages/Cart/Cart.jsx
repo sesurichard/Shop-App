@@ -1,8 +1,8 @@
 import React from "react";
-import { ShopContext } from "../../Components/ShopContext/ShopContext";
+import { ShopContext } from "../../Components/ShopContext/ShopContext.jsx";
 import { FiTrash2 } from "react-icons/fi";
-import CartDetails from "./CartDetails";
-import "./cart.css";
+import CartDetails from "./CartDetails.jsx";
+import "./Cart.css";
 import { useContext } from "react";
 
 const Cart = () => {

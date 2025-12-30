@@ -35,3 +35,6 @@ const CartDetails = ({ item }) => {
 };
 
 export default CartDetails;
+
+
+

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar.jsx";
-// import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
 import Homepage from "./Pages/Homepage/Homepage.jsx";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
 import Cart from "./Pages/Cart/Cart.jsx";

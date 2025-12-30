@@ -2,7 +2,6 @@ import React from "react";
 import { ShopContext } from "../../Components/ShopContext/ShopContext.jsx";
 import { FiTrash2 } from "react-icons/fi";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
-import Cart from './Cart.jsx';
 
 
 const CartDetails = ({ item }) => {

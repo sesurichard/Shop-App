@@ -1,7 +1,7 @@
 import React from "react";
 import { ShopContext } from "../../Components/ShopContext/ShopContext.jsx";
 import { FiTrash2 } from "react-icons/fi";
-import CartDetails from "./CartDetails.jsx";
+import CartDetails from "../../../src/Pages/Cart/CartDetails.jsx";
 import "./Cart.css";
 import { useContext } from "react";
 

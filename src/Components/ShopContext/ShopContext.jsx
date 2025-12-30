@@ -2,6 +2,7 @@ import { Children, createContext, useState } from "react";
 export const ShopContext = createContext();
 import { productsData } from "../../assets/data";
 import { toast } from "react-toastify";
+import { useEffect } from "react";
 
 const ShopContextProvider = ({ children }) => {
   const [products, setProducts] = useState(productsData);
@@ -12,8 +13,8 @@ const ShopContextProvider = ({ children }) => {
 
   useEffect(() => {
     const total = cart.reduce((accumulator, currentItem) => {
-      const priceAsNumber = parsefloat(currentItem.price);
-      if (isNan(priceAsNumber)) {
+      const priceAsNumber = parseFloat(currentItem.price);
+      if (isNaN(priceAsNumber)) {
         return accumulator;
       }
       return accumulator + priceAsNumber * currentItem.amount;
@@ -53,6 +54,10 @@ const ShopContextProvider = ({ children }) => {
   };
 
   const clearCart = () => {
+    if (cart.length === 0) {
+      toast.error("This cart is empty");
+      return;
+    }
     setCart([]);
     toast.success("Cart Empty");
   };

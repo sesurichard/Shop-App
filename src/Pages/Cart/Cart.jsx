@@ -1,6 +1,9 @@
 import React from "react";
 import { ShopContext } from "../../Components/ShopContext/ShopContext";
 import { FiTrash2 } from "react-icons/fi";
+import CartDetails from "./CartDetails";
+import "./cart.css";
+import { useContext } from "react";
 
 const Cart = () => {
   const { cart, total, clearCart, quantity } = useContext(ShopContext);
@@ -11,7 +14,7 @@ const Cart = () => {
           <div className="cart-header">
             <h1>Shopping Cart</h1>
             <h1>Items: {quantity}</h1>
-            <FiTrash2 onClick={clearCart} />
+            <FiTrash2 onClick={clearCart} className="delete-cart" />
           </div>
           <div className="cart-header">
             <span>Product Description </span>
@@ -21,7 +24,7 @@ const Cart = () => {
           </div>
           <div className="cart-details">
             {cart.length > 0 ? (
-              cart.map((item) => <CartDetails item={item} key={item} />)
+              cart.map((item) => <cartDetails item={item} key={item} />)
             ) : (
               <p> Your Cart is Empty </p>
             )}
@@ -41,7 +44,7 @@ const Cart = () => {
             <span>Shipping fees</span>
             <span>Free</span>
           </div>
-          <div className="summary-item">
+          <div className="summary-item total-cost">
             <span>Total Cost </span>
             <span>${total}</span>
           </div>

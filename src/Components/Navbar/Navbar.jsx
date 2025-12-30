@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsCart3 } from "react-icons/bs";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../ShopContext/ShopContext";
 
 const Navbar = () => {
+  const { quantity } = useContext(ShopContext);
   return (
     <div>
       <div className="navbar">
@@ -19,7 +21,7 @@ const Navbar = () => {
         <Link to="/cart">
           <div className="nav_icon_wrapper">
             <BsCart3 className="nav_icon" />
-            <p className="nav_qty">0</p>
+            <p className="nav_qty">{quantity}</p>
           </div>
         </Link>
       </div>

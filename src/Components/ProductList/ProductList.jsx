@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../ShopContext/ShopContext";
 import "./ProductList.css";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
-  const { products } = useContext(ShopContext);
+  const { products, addToCart } = useContext(ShopContext);
   return (
     <div>
       <div className="product-list">
@@ -13,12 +14,16 @@ const ProductList = () => {
             const { id, image, name, price } = product;
             return (
               <div className="product-card" key={id}>
-                <img src={image} alt="" className="product-img" />
+                <Link to={`/product/${product.id}`}>
+                  <img src={image} alt="" className="product-img" />
+                </Link>
                 <div className="product-info">
                   <h4>{name}</h4>
                   <p>${price}</p>
                 </div>
-                <button className="cta">Add To Cart</button>
+                <button className="cta" onClick={() => addToCart(product, id)}>
+                  Add To Cart
+                </button>
               </div>
             );
           })}

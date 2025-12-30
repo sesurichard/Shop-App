@@ -2,9 +2,10 @@ import React from "react";
 import { ShopContext } from "../../Components/ShopContext/ShopContext.jsx";
 import { FiTrash2 } from "react-icons/fi";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
+import Cart from './Cart.jsx';
 
 
-const cartDetails = ({ item }) => {
+const CartDetails = ({ item }) => {
   const { removeFromCart, increaseQuantity, reducedQuantity } =
     useContext(ShopContext);
   const { id, name, image, price, amount } = item;
@@ -34,4 +35,4 @@ const cartDetails = ({ item }) => {
   );
 };
 
-export default cartDetails;
+export default CartDetails;
